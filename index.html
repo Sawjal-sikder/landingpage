@@ -22,11 +22,35 @@
         animation: slideRightToLeft 2s ease-out forwards; /* Apply the animation */
       }
 
+      .slider-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 20px;
+      }
+
+      .slider img {
+        width: 150px;
+        transition: transform 0.3s ease;
+      }
+
+      .slider img:hover {
+        transform: scale(1.1);
+      }
+
     </style>
   </head>
 
   <body class="min-h-screen bg-black" style="font-family: 'Inter', sans-serif;">
-    <div class="w-3xl mx-auto">
+    <div class="w-2xl mx-auto">
       <div class="mt-10">
         <img src="asset/Frame 910.png" width="310" alt>
       </div>
@@ -183,7 +207,10 @@
                   <p class="text-white font-semibold mt-2">— Bill Gates</p>
               </div>
           </div>
-      </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <img src="/asset/token.png" alt="">
+      </div>
 
         <div class="text-white my-10">
           <div class="flex items-center gap-x-2">
@@ -220,10 +247,11 @@
         <div class="flex justify-center">
           <h1 class="font-bold text-4xl py-20">MEME IT AWAY</h1>
         </div>
-        <div class="flex items-center justify-center gap-x-5 w-full overflow-hidden relative">
-          <div class="flex animate-slide-right space-x-5">
+        <div class="slider-container flex items-center justify-center gap-x-5 w-full overflow-hidden relative">
+          <div class="slider flex space-x-5">
             <img src="asset/slider1.png" alt="" class="w-48 transition-transform transform hover:scale-110">
             <img src="asset/slider2.png" alt="" class="w-48 transition-transform transform hover:scale-110">
+            <img src="asset/slider-4.png" alt="" class="w-64 transition-transform transform hover:scale-110">
             <img src="asset/slider3.png" alt="" class="w-48 transition-transform transform hover:scale-110">
           </div>
         </div>
@@ -232,9 +260,37 @@
     </div>
       <div class="border-t-3 border-[#30AD6B] rounded-full pt-10 mt-20">
         <div class="flex justify-center"><img src="asset/Frame 910.png" width="120" height="200" alt=""></div>
-        <div class="flex justify-center"><p class="text-white py-5">© Copyright 2025 Mycrosift AI All Rights Reserved</p>
+        <div class="flex justify-center"><p class="text-sm text-white py-5">© Copyright 2025 Mycrosift AI All Rights Reserved</p>
         </div>
       </div>
+
+    <script>
+      const slider = document.querySelector('.slider');
+      const images = document.querySelectorAll('.slider img');
+      let index = 0;
+      let imageWidth = images[0].clientWidth + 20; // Image width + gap
+
+      document.querySelector('.slider-container').addEventListener('mousemove', (event) => {
+        const containerWidth = event.currentTarget.clientWidth;
+        const mouseX = event.clientX - event.currentTarget.getBoundingClientRect().left;
+
+        // If mouse is on the right side, slide left
+        if (mouseX > containerWidth / 2) {
+          if (index < images.length - 1) {
+            index++;
+            slider.style.transform = `translateX(-${index * imageWidth}px)`;
+          }
+        }
+
+        // If mouse is on the left side, slide right
+        if (mouseX < containerWidth / 2) {
+          if (index > 0) {
+            index--;
+            slider.style.transform = `translateX(-${index * imageWidth}px)`;
+          }
+        }
+      });
+    </script>
   </body>
 
 </html>
