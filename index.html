@@ -1,348 +1,687 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mycrosift AI</title>
-    <link rel="icon" href="asset/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style>
-      @keyframes slideRightToLeft {
-        0% {
-          transform: translateX(100%); /* Start from the right outside */
-        }
-        100% {
-          transform: translateX(0); /* End at the normal position */
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mycrosift AI</title>
+  <link rel="icon" href="asset/favicon.ico" type="image/x-icon" />
+  <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    @keyframes slideRightToLeft {
+      0% {
+        transform: translateX(
+                100%
+        ); /* Start from the right outside */
       }
-
-      .animate-slide-right {
-        animation: slideRightToLeft 2s ease-out forwards; /* Apply the animation */
+      100% {
+        transform: translateX(0); /* End at the normal position */
       }
+    }
 
-      .slider-container {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .animate-slide-right {
+      animation: slideRightToLeft 2s ease-out forwards; /* Apply the animation */
+    }
 
-      .slider {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        gap: 10px;
-      }
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .slider img {
-        width: 150px;
-        transition: transform 0.5s ease-in-out;
-      }
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 10px;
+    }
 
-      .slider img:hover {
-        transform: scale(1.1);
-      }
+    .slider img {
+      width: 150px;
+      transition: transform 0.5s ease-in-out;
+    }
 
-    </style>
-  </head>
+    .slider img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
 
-  <body class="bg-black mx-auto">
-  <div class="min-h-screen mx-auto relative" style="font-family: 'Inter', sans-serif;">
-    <div class="absolute -top-35 -left-15 w-48 h-48 bg-green-400 blur-3xl opacity-30"></div>
-    <div class="absolute -right-25 -top-35 w-72 h-72 bg-cover bg-center bg-no-repeat opacity-80"
-         style="background-image: url('./asset/image-12.png');">
-    </div>
+<body class="bg-black">
+<div
+        class="relative min-h-screen px-8 py-4 md:px-4 md:py-2"
+        style="font-family: 'Inter', sans-serif"
+>
+  <div
+          class="absolute -top-35 -left-15 h-48 w-48 bg-green-400 opacity-30 blur-3xl"
+  ></div>
+  <div
+         class="absolute -top-35 -right-25 h-72 w-72 bg-cover bg-no-repeat bg-right-top opacity-100
+         sm:h-56 sm:w-56 sm:-top-20 sm:-right-10 sm:overflow-hidden
+         md:h-64 md:w-64 md:-top-25 md:-right-15
+         lg:h-72 lg:w-72 lg:-top-35 lg:-right-25 sm:hidden md:block lg:block"
+          style="background-image: url('./asset/image-12.png');"
+  ></div>
 
-    <div class="w-3xl mx-auto">
-      <div class="justify-center">
-        <div class="mt-10 px-10">
-          <img src="asset/Frame 910.png" style="width: 221px; height: 55px;" alt="logo">
-        </div>
-        <div class="relative my-20 px-10 text-white">
-          <!--    on the left side use background image    -->
-          <div class="absolute -left-75 top-8 inset-0 w-72 h-72 bg-cover bg-center bg-no-repeat opacity-80"
-               style="background-image: url('./asset/image-12.png');">
-t
-          </div>
-          <h1 class="font-bold text-[90px]">Mycrosift</h1>
-          <div class="text-base *:py-3 mt-3">
-            <p>Delve into <span class="font-bold text-md">nostalgia</span> of your
-              childhood with <span
-                      class="font-bold text-md">Mycrosift AI</span> , something we all
-              grew up with and carry fond memories of.
-            </p>
-            <p><span class="font-bold text-md">$Mycrosift ($MCS)</span> is not
-              just another meme coin. $MCS blends nostalgia
-              with the high multiplier potential of a fast growing memecoin. </p>
-            <p>$Mycrosift has real would use cases like creating <span
-                    class="font-bold text-md">AI agents</span> that
-              simplify tasks in one click (2025) </p>
-          </div>
-          <div class="flex gap-x-5 mt-6">
-            <a
-                    href="https://t.me/+16jocRcqdk44MWI5"
-                    target="_blank"
-                    class="item-center flex justify-center items-center cursor-pointer gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl">
-              <img src="asset/Group.png" alt />
-              <p>Telegram</p>
-            </a>
-            <a
-                    href="https://solsale.app/presale/HXeqSxuBC3pRAiR4Y4qdSnpJF3ZzHa4ZwiNP7jpKTad7"
-                    target="_blank"
-                    class="item-center flex justify-center items-center cursor-pointer gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl">
-              <p>Buy with Solana</p>
-            </a>
-            <a
-                    href="https://x.com/mycrosift"
-                    target="_blank"
-                    class="item-center flex justify-center items-center gap-x-2 cursor-pointer rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl">
-              <p>Follow us</p>
-            </a>
-          </div>
-          <div class="absolute -right-85 top-45 w-72 h-72 bg-cover bg-center bg-no-repeat opacity-100"
-               style="background-image: url('./asset/vector-10.png');">
-          </div>
-        </div>
-        <div class=" w-full flex justify-center px-10">
-          <img src="asset/Group 887.png" alt>
-        </div>
-        <div class="relative text-white my-20 *:py-3 text-[25px] px-10">
-          <div class="absolute -top-20 -left-95 w-48 h-48 bg-green-400 blur-3xl opacity-25"></div>
-          <p class="text-base">
-            <span class="font-bold">$Mycrosift pre-sale</span>
-            has been audited & conducted by
-            <span class="font-bold">Gempad</span>
-            (a very reputable launchpad in the crypto space).
+
+  <div class="mx-auto w-full max-w-3xl">
+    <div class="block">
+      <div class="mt-6 sm:mt-10">
+        <img
+                src="./asset/Frame 910.png"
+                style="width: 221px; height: 55px"
+                alt="logo"
+        />
+      </div>
+      <div class="relative my-10 text-white sm:my-20">
+        <!--    on the left side use background image    -->
+        <div
+                class="absolute inset-0 top-8 -left-75 h-72 w-72 bg-cover bg-center bg-no-repeat opacity-80"
+                style="
+                                background-image: url('./asset/image-12.png');
+                            "
+        ></div>
+        <h1 class="text-4xl font-bold sm:text-8xl">
+          Mycrosift
+        </h1>
+        <div class="w-auto mt-3 text-base *:py-3">
+          <p>
+            Delve into
+            <span class="text-md font-bold">nostalgia</span>
+            of your childhood with
+            <span class="text-md font-bold"
+            >Mycrosift AI</span
+            >
+            , something we all grew up with and carry fond
+            memories of.
           </p>
-          <p class="text-base">Click below to access the Mycrosift pre-sale which can close anytime
-            without prior notice. Listing on Raydium
-            & Jupiter follows after the pre-sale is over. </p>
-            <p class="text-base">80% of tokens other than the pre-sale are locked for 90 days.
-            Pre-sale participants receive their tokens upon completion of the pre-sale. </p>
-          <div class="flex justify-center">
-
-            <a
-                    href="https://solsale.app/presale/HXeqSxuBC3pRAiR4Y4qdSnpJF3ZzHa4ZwiNP7jpKTad7"
-                    target="_blank"
-                    class="item-center flex justify-center items-center cursor-pointer gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl">
-              <p>Click to join the pre-sale</p>
-            </a>
-          </div>
+          <p>
+                                <span class="text-md font-bold"
+                                >$Mycrosift ($MCS)</span
+                                >
+            is not just another meme coin. $MCS blends
+            nostalgia with the high multiplier potential of
+            a fast growing memecoin.
+          </p>
+          <p>
+            $Mycrosift has real would use cases like
+            creating
+            <span class="text-md font-bold">AI agents</span>
+            that simplify tasks in one click (2025)
+          </p>
         </div>
-        <div class="my-20">
-          <div class="md:flex md:items-start md:gap-4 px-10">
-            <!-- Card container -->
-            <div class="md:w-1/3 mt-4 "> <!-- Set the width of the card to a smaller fraction (1/3) -->
-              <div class="relative rounded-[1rem] p-[1px] bg-gradient-to-b from-green-500/20 to-transparent">
-                <!-- Green glow effect -->
-                <div class="absolute inset-0 rounded-[2rem] blur-lg bg-green-500/40"></div>
+        <div
+                class="mt-6 flex flex-wrap items-center justify-center gap-5 sm:justify-start"
+        >
+          <a
+                  href="https://t.me/+16jocRcqdk44MWI5"
+                  target="_blank"
+                  class="item-center flex cursor-pointer items-center justify-center gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl"
+          >
+            <img src="./asset/Group.png" alt />
+            <p>Telegram</p>
+          </a>
+          <a
+                  href="https://solsale.app/presale/HXeqSxuBC3pRAiR4Y4qdSnpJF3ZzHa4ZwiNP7jpKTad7"
+                  target="_blank"
+                  class="item-center flex cursor-pointer items-center justify-center gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl"
+          >
+            <p>Buy with Solana</p>
+          </a>
+          <a
+                  href="https://x.com/mycrosift"
+                  target="_blank"
+                  class="item-center flex cursor-pointer items-center justify-center gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl"
+          >
+            <p>Follow us</p>
+          </a>
+        </div>
+<!--        <div-->
+<!--                class="absolute top-45 -right-85 h-72 w-72 bg-cover bg-center bg-no-repeat opacity-100"-->
+<!--                style="-->
+<!--                                background-image: url('./asset/vector-10.png');-->
+<!--                            "-->
+<!--        ></div>-->
+      </div>
+      <div class="my-4">
+        <img src="./asset/Group 887.png" alt />
+      </div>
+      <div
+              class="relative my-10 text-lg text-white *:py-3 sm:my-20"
+      >
+        <div
+                class="absolute -top-20 -left-95 h-48 w-48 bg-green-400 opacity-25 blur-3xl"
+        ></div>
+        <p class="text-base">
+          <span class="font-bold">$Mycrosift pre-sale</span>
+          has been audited & conducted by
+          <span class="font-bold">Gempad</span>
+          (a very reputable launchpad in the crypto space).
+        </p>
+        <p class="text-base">
+          Click below to access the Mycrosift pre-sale which
+          can close anytime without prior notice. Listing on
+          Raydium & Jupiter follows after the pre-sale is
+          over.
+        </p>
+        <p class="text-base">
+          80% of tokens other than the pre-sale are locked for
+          90 days. Pre-sale participants receive their tokens
+          upon completion of the pre-sale.
+        </p>
+        <div class="mt-6 flex justify-center">
+          <a
+                  href="https://solsale.app/presale/HXeqSxuBC3pRAiR4Y4qdSnpJF3ZzHa4ZwiNP7jpKTad7"
+                  target="_blank"
+                  class="item-center flex cursor-pointer items-center justify-center gap-x-2 rounded-full bg-[#30AD6B] px-10 py-2 text-sm font-bold text-black drop-shadow-2xl"
+          >
+            <p>Click to join the pre-sale</p>
+          </a>
+        </div>
+      </div>
+      <div class="my-6 sm:my-20">
+        <div class="sm:flex sm:items-start sm:gap-4">
+          <!-- Card container -->
+          <div class="mt-4 sm:w-1/3">
+            <!-- Set the width of the card to a smaller fraction (1/3) -->
+            <div
+                    class="relative rounded-[1rem] bg-gradient-to-b from-green-500/20 to-transparent p-[1px]"
+            >
+              <!-- Green glow effect -->
+              <div
+                      class="absolute inset-0 rounded-[2rem] bg-green-500/40 blur-lg"
+              ></div>
 
-                <!-- Card content -->
-                <div class="relative bg-black/90 rounded-[1rem] p-10 sm:p-4">
-                  <div class="space-y-6">
-                    <!-- Header -->
-                    <div class="space-y-1 grid justify-center text-center sm:text-start">
-                      <h2 class="text-white sm:text-2xl font-semibold text-4xl">Pumpamentals</h2>
-                      <p class="text-sm text-gray-400">Pumping Fundamentals</p>
+              <!-- Card content -->
+              <div
+                      class="relative rounded-[1rem] bg-black/90 p-4"
+              >
+                <div class="space-y-6">
+                  <!-- Header -->
+                  <div class="space-y-1">
+                    <h2
+                            class="text-2xl font-semibold text-white"
+                    >
+                      Pumpamentals
+                    </h2>
+                    <p
+                            class="text-sm text-gray-400"
+                    >
+                      Pumping Fundamentals
+                    </p>
+                  </div>
+
+                  <!-- Stats -->
+                  <div class="space-y-1">
+                    <div
+                            class="flex items-center space-x-2"
+                    >
+                                                    <span
+                                                            class="text-sm text-gray-400"
+                                                    >Supply:</span
+                                                    >
+                      <span
+                              class="text-sm text-green-500"
+                      >1B</span
+                      >
                     </div>
-
-                    <!-- Stats -->
-                    <div class="space-y-1">
-                      <div class="flex items-center space-x-2">
-                        <span class="text-sm text-gray-400">Supply:</span>
-                        <span class="text-sm text-green-500">1B</span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <span class="text-sm text-gray-400">Liq:</span>
-                        <span class="text-sm text-amber-600">Burnt</span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <span class="text-sm text-gray-400">Mint:</span>
-                        <span class="text-sm text-red-500">Revoked</span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <span class="text-sm text-gray-400">Ticker:</span>
-                        <span class="text-sm text-white">$MCS</span>
-                      </div>
+                    <div
+                            class="flex items-center space-x-2"
+                    >
+                                                    <span
+                                                            class="text-sm text-gray-400"
+                                                    >Liq:</span
+                                                    >
+                      <span
+                              class="text-sm text-amber-600"
+                      >Burnt</span
+                      >
                     </div>
-
-                    <!-- Button -->
-                    <div class="grid justify-center">
-                      <button class="w-full text-white cursor-pointer bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center">
-                        Check it out
-                      </button>
+                    <div
+                            class="flex items-center space-x-2"
+                    >
+                                                    <span
+                                                            class="text-sm text-gray-400"
+                                                    >Mint:</span
+                                                    >
+                      <span
+                              class="text-sm text-red-500"
+                      >Revoked</span
+                      >
+                    </div>
+                    <div
+                            class="flex items-center space-x-2"
+                    >
+                                                    <span
+                                                            class="text-sm text-gray-400"
+                                                    >Ticker:</span
+                                                    >
+                      <span
+                              class="text-sm text-white"
+                      >$MCS</span
+                      >
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- Roadmap Section -->
-            <div class="md:w-2/3 mt-12 md:mt-0"> <!-- Make the right section take up more space (2/3) -->
-              <h1 class="text-3xl text-white font-bold text-center mb-6">$MYCROSIFT ROADMAP</h1>
-
-              <div class="space-y-6">
-                <!-- Roadmap Items -->
-                <div class="flex items-start gap-4">
-                  <img src="asset/Group 881.png" alt="" class="w-12 h-12">
-                  <p class="text-sm text-gray-300">
-                    <span class="font-bold">Phase 1:</span> Presale, viral memes, promotion via 3 Youtubers + Promotion via small telegram channels during the pre-sale and community growth + building strong unity amongst the community.
-                  </p>
-                </div>
-
-                <div class="flex items-start gap-4">
-                  <img src="asset/Group 881.png" alt="" class="w-12 h-12">
-                  <p class="text-sm text-gray-300">
-                    <span class="font-bold">Phase 2:</span> DEX & CEX listings + 37 KOLs (Telegram Caller channels with at least 12K minimum subscribers) + 17 additional Youtuber partnerships.
-                  </p>
-                </div>
-
-                <div class="flex items-start gap-4">
-                  <img src="asset/Group 881.png" alt="" class="w-12 h-12">
-                  <p class="text-sm text-gray-300">
-                    <span class="font-bold">Phase 3:</span> Guerrilla Marketing: Airdrops, meme contests, and other stealth marketing tactics. Token Burns & Token buy-backs in the second half of February & in March.
-                  </p>
-                </div>
-
-                <div class="flex items-start gap-4">
-                  <img src="asset/Group 881.png" alt="" class="w-12 h-12">
-                  <p class="text-sm text-gray-300">
-                    <span class="font-bold">Phase 4:</span> Giving $Mycrosift AI the ability to create AI agents that automate various tasks and list them on Twitter. $MCS holders can expect airdrops from AI agents created on top of $Mycrosift in the future. Being not just a meme coin with no utility, $MCS can be a long-term hold for long-term gains.
-                  </p>
+                  <!-- Button -->
+                  <button
+                          class="w-full cursor-pointer rounded-full bg-gradient-to-r from-green-400 via-green-500 to-green-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:ring-4 focus:ring-green-300 focus:outline-none dark:focus:ring-green-800"
+                  >
+                    Check it out
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
-        </div>
+          <!-- Roadmap Section -->
+          <div class="mt-12 sm:w-2/3 md:mt-0">
+            <!-- Make the right section take up more space (2/3) -->
+            <h1
+                    class="mb-6 text-center text-3xl font-bold text-white"
+            >
+              $MYCROSIFT ROADMAP
+            </h1>
 
-        <div class="relative py-10 flex items-center justify-center">
-          <div class="border border-green-500 p-8 rounded-lg max-w-2xl flex items-center text-white">
-            <div class="rounded-full p-2 mr-2 flex-shrink-0">
-              <img src="asset/build.png" class="w-32 h-32" alt="">
-            </div>
-            <div>
-              <p class="text-green-400 italic text-lg">
-                "I choose a meme person to do a hard job because a meme person will find an easy way to do it."
-              </p>
-              <p class="text-white font-semibold mt-2">— Bill Gates</p>
-            </div>
-          </div>
-          <div class="absolute -right-70 w-64 h-64 bg-cover bg-center bg-no-repeat opacity-60"
-               style="background-image: url('./asset/image-12.png');">
-          </div>
-        </div>
-        <div>
-          <div class="flex justify-center mt-8">
-            <img src="/asset/token.png" alt="">
-          </div>
-        </div>
+            <div class="space-y-6">
+              <!-- Roadmap Items -->
+              <div
+                      class="flex items-start gap-0.5 sm:gap-4"
+              >
+                <img
+                        src="./asset/Group 881.png"
+                        alt=""
+                        class="h-12 w-12"
+                />
+                <p class="text-sm text-gray-300">
+                                            <span class="font-bold"
+                                            >Phase 1:</span
+                                            >
+                  Presale, viral memes, promotion via
+                  3 Youtubers + Promotion via small
+                  telegram channels during the
+                  pre-sale and community growth +
+                  building strong unity amongst the
+                  community.
+                </p>
+              </div>
 
-        <div class="relative text-white my-10 px-10">
-          <div class="absolute -left-80 top-20 inset-0 w-72 h-72 bg-cover bg-center bg-no-repeat opacity-80"
-               style="background-image: url('./asset/image-12.png');">
-          </div>
+              <div
+                      class="flex items-start gap-0.5 sm:gap-4"
+              >
+                <img
+                        src="./asset/Group 881.png"
+                        alt=""
+                        class="h-12 w-12"
+                />
+                <p class="text-sm text-gray-300">
+                                            <span class="font-bold"
+                                            >Phase 2:</span
+                                            >
+                  DEX & CEX listings + 37 KOLs
+                  (Telegram Caller channels with at
+                  least 12K minimum subscribers) + 17
+                  additional Youtuber partnerships.
+                </p>
+              </div>
 
-          <div class="flex items-center gap-x-2">
-            <img src="asset/Group 891.png" width="60" alt="">
-            <p class="text-base">Coingecko and Coinmarketcap fast-track expedited listing</p>
-          </div>
-          <div class="flex items-center gap-x-2">
-            <img src="asset/Group 891 (1).png" width="60" alt="">
-            <p class="text-base">Dextools trending, Dexscreener Ads and partnerships with 33 KOLs (Telegram and Twitter Callers) as of this post.</p>
-          </div>
-          <div class="flex items-center gap-x-2">
-            <img src="asset/Group 891 (2).png" width="60" alt="">
-            <p class="text-base">Youtube Influencers: Partnering with top names in the league of CryptoGodJohn and 17 others.</p>
-          </div>
-          <div class="flex items-center gap-x-2">
-            <img src="asset/4g.png" width="60" alt="">
-            <p class="text-base">Community Building: Strong Telegram with AMAs and discussions and rewards for long-term supportive members.</p>
-          </div>
-          <div class="flex items-center gap-x-2">
-            <img src="asset/Group 891 (3).png" width="60" alt="">
-            <p class="text-base">Guerrilla Marketing: Airdrops, meme contests, and other stealth marketing tactics.</p>
-          </div>
-          <div class="flex items-center gap-x-2">
-            <img src="asset/Group 891 (4).png" width="60" alt="">
-            <p class="text-base">Multiple CEX Listings: Kucoin and OKX listings in February.</p>
-          </div>
-          <div class="flex items-center gap-x-2">
-            <img src="asset/Group 891 (5).png" width="60" alt="">
-            <p class="text-base">Token Burns & Buy-Backs: February & March (Buy-backs only in Q1, not Q2 onwards).</p>
-          </div>
+              <div
+                      class="flex items-start gap-0.5 sm:gap-4"
+              >
+                <img
+                        src="./asset/Group 881.png"
+                        alt=""
+                        class="h-12 w-12"
+                />
+                <p class="text-sm text-gray-300">
+                                            <span class="font-bold"
+                                            >Phase 3:</span
+                                            >
+                  Guerrilla Marketing: Airdrops, meme
+                  contests, and other stealth
+                  marketing tactics. Token Burns &
+                  Token buy-backs in the second half
+                  of February & in March.
+                </p>
+              </div>
 
-          <div class="absolute -right-85 -top-40 w-72 h-72 bg-cover bg-center bg-no-repeat opacity-100"
-               style="background-image: url('./asset/vector-10.png');">
-          </div>
-        </div>
-
-
-        <div class="text-white px-10">
-          <div class="flex justify-center">
-            <h1 class="font-bold text-4xl py-20">MEME IT AWAY</h1>
-          </div>
-          <div class="slider-container">
-            <div class="slider">
-              <img src="asset/slider1.png" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="asset/slider-4.png" alt="" loading="lazy" class="w-64 transition-transform duration-1000 transform hover:scale-110">
-              <img src="asset/slider3.png" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/1.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/2.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/3.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/4.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/6.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/7.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/8.jpeg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/9.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/10.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/11.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/12.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/13.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/14.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
-              <img src="./asset/memes/15.jpg" alt="" loading="lazy" class="w-48 transition-transform duration-1000 transform hover:scale-110">
+              <div
+                      class="flex items-start gap-0.5 sm:gap-4"
+              >
+                <img
+                        src="./asset/Group 881.png"
+                        alt=""
+                        class="h-12 w-12"
+                />
+                <p class="text-sm text-gray-300">
+                                            <span class="font-bold"
+                                            >Phase 4:</span
+                                            >
+                  Giving $Mycrosift AI the ability to
+                  create AI agents that automate
+                  various tasks and list them on
+                  Twitter. $MCS holders can expect
+                  airdrops from AI agents created on
+                  top of $Mycrosift in the future.
+                  Being not just a meme coin with no
+                  utility, $MCS can be a long-term
+                  hold for long-term gains.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <footer class="border-t-3 border-[#30AD6B] w-full rounded-full ml-2 pt-10 mt-20">
-        <div class="flex justify-center"><img src="asset/Frame 910.png" width="120" height="200" alt=""></div>
-        <div class="flex justify-center"><p class="text-sm text-white py-5">© Copyright 2025 Mycrosift AI All Rights Reserved</p>
+      <div
+              class="relative flex items-center justify-center py-5 sm:py-10"
+      >
+        <div
+                class="flex max-w-2xl flex-wrap items-center justify-center rounded-lg border border-green-500 px-6 py-4 text-white sm:p-8"
+        >
+          <div class="mr-2 flex-shrink-0 rounded-full p-2">
+            <img
+                    src="./asset/build.png"
+                    class="h-32 w-32"
+                    alt=""
+            />
+          </div>
+          <div class="text-center sm:text-left">
+            <p class="text-lg text-green-400 italic">
+              "I choose a meme person to do a hard job
+              because a meme person will find an easy way
+              to do it."
+            </p>
+            <p class="mt-2 font-semibold text-white">
+              — Bill Gates
+            </p>
+          </div>
         </div>
-      </footer>
+        <div
+                class="absolute bg-cover bg-center bg-no-repeat opacity-100
+         h-64 w-64 -right-70
+         hidden sm:block"
+                style="background-image: url('./asset/image-12.png');"
+        ></div>
+
+
+      </div>
+      <div class="my-8 flex justify-center">
+        <img src="./asset/token.png" alt="" />
+      </div>
+
+      <div
+              class="relative my-6 sm:my-10 text-white flex flex-col gap-y-4"
+      >
+        <div
+                class="absolute inset-0 top-20 -left-80 h-72 w-72 bg-cover bg-center bg-no-repeat opacity-80
+            sm:h-56 sm:w-56 sm:-top-10 sm:-left-10 sm:overflow-hidden"
+                style="
+                                background-image: url('./asset/image-12.png');
+                            "
+        ></div>
+
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/Group 891.png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Coingecko and Coinmarketcap fast-track expedited
+            listing
+          </p>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/Group 891 (1).png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Dextools trending, Dexscreener Ads and
+            partnerships with 33 KOLs (Telegram and Twitter
+            Callers) as of this post.
+          </p>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/Group 891 (2).png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Youtube Influencers: Partnering with top names
+            in the league of CryptoGodJohn and 17 others.
+          </p>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/4g.png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Community Building: Strong Telegram with AMAs
+            and discussions and rewards for long-term
+            supportive members.
+          </p>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/Group 891 (3).png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Guerrilla Marketing: Airdrops, meme contests,
+            and other stealth marketing tactics.
+          </p>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/Group 891 (4).png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Multiple CEX Listings: Kucoin and OKX listings
+            in February.
+          </p>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <img
+                  src="./asset/Group 891 (5).png"
+                  class="w-12 sm:w-16"
+                  alt=""
+          />
+          <p class="text-base">
+            Token Burns & Buy-Backs: February & March
+            (Buy-backs only in Q1, not Q2 onwards).
+          </p>
+        </div>
+
+        <div
+                class="absolute -top-40 -right-85 h-72 w-72 bg-cover bg-center bg-no-repeat opacity-100
+         hidden sm:block"
+                style="background-image: url('./asset/vector-10.png');"
+        ></div>
+
+      </div>
+
+      <div class="text-white">
+        <div class="flex justify-center">
+          <h1 class="py-20 text-4xl font-bold">
+            MEME IT AWAY
+          </h1>
+        </div>
+        <div class="slider-container">
+          <div class="slider">
+            <img
+                    src="./asset/slider1.png"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/slider-4.png"
+                    alt=""
+                    loading="lazy"
+                    class="w-64 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/slider3.png"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/1.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/2.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/3.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/4.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/6.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/7.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/8.jpeg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/9.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/10.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/11.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/12.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/13.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/14.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+            <img
+                    src="./asset/memes/15.jpg"
+                    alt=""
+                    loading="lazy"
+                    class="w-48 transform transition-transform duration-1000 hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    <script>
-      const slider = document.querySelector('.slider');
-      const images = document.querySelectorAll('.slider img');
-      let index = 0;
-      let imageWidth = images[0].clientWidth + 20; // Image width + gap
+</div>
+<footer
+        class="mt-20 ml-2 rounded-full border-t-3 border-[#30AD6B] pt-10"
+>
+  <div class="flex justify-center">
+    <img
+            src="./asset/Frame 910.png"
+            width="120"
+            height="200"
+            alt=""
+    />
+  </div>
+  <div class="flex justify-center">
+    <p class="py-5 text-sm text-white">
+      © Copyright 2025 Mycrosift AI All Rights Reserved
+    </p>
+  </div>
+</footer>
 
-      document.querySelector('.slider-container').addEventListener('mousemove', (event) => {
-        const containerWidth = event.currentTarget.clientWidth;
-        const mouseX = event.clientX - event.currentTarget.getBoundingClientRect().left;
+<script>
+  const slider = document.querySelector(".slider");
+  const images = document.querySelectorAll(".slider img");
+  let index = 0;
+  let imageWidth = images[0].clientWidth + 20; // Image width + gap
 
-        // If mouse is on the right side, slide left
-        if (mouseX > containerWidth / 2) {
-          if (index < images.length - 1) {
-            index++;
-            slider.style.transform = `translateX(-${index * imageWidth}px)`;
-          }
-        }
+  document
+          .querySelector(".slider-container")
+          .addEventListener("mousemove", (event) => {
+            const containerWidth = event.currentTarget.clientWidth;
+            const mouseX =
+                    event.clientX -
+                    event.currentTarget.getBoundingClientRect().left;
 
-        // If mouse is on the left side, slide right
-        if (mouseX < containerWidth / 2) {
-          if (index > 0) {
-            index--;
-            slider.style.transform = `translateX(-${index * imageWidth}px)`;
-          }
-        }
-      });
-    </script>
-  </body>
+            // If mouse is on the right side, slide left
+            if (mouseX > containerWidth / 2) {
+              if (index < images.length - 1) {
+                index++;
+                slider.style.transform = `translateX(-${
+                        index * imageWidth
+                }px)`;
+              }
+            }
 
+            // If mouse is on the left side, slide right
+            if (mouseX < containerWidth / 2) {
+              if (index > 0) {
+                index--;
+                slider.style.transform = `translateX(-${
+                        index * imageWidth
+                }px)`;
+              }
+            }
+          });
+</script>
+</body>
 </html>
